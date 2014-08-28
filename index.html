@@ -11,7 +11,9 @@
 .TeamHeader a, .TeamHeader a:hover{
 	color: white;
 }
-
+.artsy-like{
+	margin-top:20px;
+}
 
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
 display: block;
@@ -67,7 +69,9 @@ li:hover{
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <img src="img/VeroNoctisBannerBW.jpg" id="headerimg"></img>
+        <div>
+        	<img class="img-responsive" src="img/VeroNoctisBannerBW.jpg" id="headerimg"></img>
+        </div>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
     </head>
@@ -81,7 +85,7 @@ li:hover{
       </div>
 
     </div>
-           <nav class="navbar navbar-default" role="navigation">
+         <nav class="navbar navbar-default" role="navigation">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -106,11 +110,26 @@ li:hover{
 		          </ul>
 		        </li>
 		      </ul>
+		     <div class="navbar-right" style="min-width: 300px; text-align: center; color: white; margin-top: 7px; margin-bottom: 4px;">
+				<div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+						<div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" id="javascriptlocale">
+
+						  </div>
+
+						  <!-- Controls -->
+
+						</div>
+			 </div>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
     <div>
     <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div>
 			    <div class="jumbotron col-sm-12" style="margin-top: -21px;">
 			    	<div style="max-width: 600px; margin-left: auto; margin-right: auto;">
 						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -131,7 +150,7 @@ li:hover{
 						    <div class="item">
 						      <img src="img/PlaceHolder1.jpg" alt="...">
 						      <div class="carousel-caption">
-						        <p>Team at work doing what they do best</p>
+						        <p>Vero Noctis doing what they do best</p>
 						      </div>
 						    </div>
 						  </div>
@@ -145,7 +164,9 @@ li:hover{
 						  </a>
 						</div>
 					</div>
+
 				</div>
+		</div>
 	</div>
 
     <div class="container">
@@ -153,7 +174,7 @@ li:hover{
       <div class="row">
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="img/VNLogotransPlaceHolder.png" alt="...">
+		      <img src="img/Fighter.png" class="artsy-like" alt="...">
 		      <div class="caption">
 		        <h3>Mecha Albizu</h3>
 		        <p>Jungler/Team Captain</p>
@@ -162,7 +183,7 @@ li:hover{
 		  </div>
 		 <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="img/VNLogotransPlaceHolder.png" alt="...">
+		      <img src="img/Mage.png" class="artsy-like" alt="...">
 		      <div class="caption">
 		        <h3>O P</h3>
 		        <p>Mid Lane/Co-Captain</p>
@@ -171,7 +192,7 @@ li:hover{
 		  </div>
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="img/VNLogotransPlaceHolder.png" alt="...">
+		      <img src="img/Tank.png" class="artsy-like" alt="...">
 		      <div class="caption">
 		        <h3>Gensu</h3>
 		        <p>Top Lane</p>
@@ -183,7 +204,7 @@ li:hover{
       <div class="row">
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="img/VNLogotransPlaceHolder.png" alt="...">
+		      <img src="img/Marksman.png" class="artsy-like" alt="...">
 		      <div class="caption">
 		        <h3>Leolrath</h3>
 		        <p>Marksman</p>
@@ -192,7 +213,7 @@ li:hover{
 		  </div>
 		 <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="img/VNLogotransPlaceHolder.png" alt="...">
+		      <img src="img/Support.png" class="artsy-like" alt="...">
 		      <div class="caption">
 		        <h3>Kuro</h3>
 		        <p>Support</p>
@@ -201,7 +222,7 @@ li:hover{
 		  </div>
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="img/VNLogotransPlaceHolder.png" alt="...">
+		      <img src="img/Assassin.png" class="artsy-like" alt="...">
 		      <div class="caption">
 		        <h3>Kyonop</h3>
 		        <p>Substitute</p>
@@ -230,5 +251,30 @@ li:hover{
 
       <footer style="border-top: 3px solid #eeeeee;">
         <p style="text-align: right;">Made by Jom</p>
+
       </footer>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript">
+		
+				$.getJSON("http://veronoctis.herokuapp.com", function( data ){
+					var div = document.getElementById('javascriptlocale');
+					$( document ).ready(function(){
+					for (var i=0; i < 5 ; i++){
+						if(data["TEAM-0ef42470-e6bf-11e3-a0c3-d4ae528a458b"]["matchHistory"][i]["win"]){
+							var stats =  "<button type='button' class='btn btn-success'>Win </button>";
+						}else{
+							var stats = "<button type='button' class='btn btn-danger'>Loss </button>";
+						}
+						if (i == 0){
+							div.innerHTML = div.innerHTML + "<div class='item active'>" +"Vero Noctis VS. " + data["TEAM-0ef42470-e6bf-11e3-a0c3-d4ae528a458b"]["matchHistory"][i]["opposingTeamName"] + " " + stats + "</div>";
+						}
+						else{
+							div.innerHTML = div.innerHTML + "<div class='item'>" + "Vero Noctis VS. " + data["TEAM-0ef42470-e6bf-11e3-a0c3-d4ae528a458b"]["matchHistory"][i]["opposingTeamName"]+ " " + stats + "</div>";
+						}
+
+					}
+				})
+			});
+		</script>
 </html>

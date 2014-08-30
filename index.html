@@ -46,6 +46,54 @@ li:hover{
 .caption > h3, .caption > p{
 	text-align: center;
 }
+#javascriptlocale{
+	color:white; line-height: 3; max-width: 500px;
+}
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+#headerimg{
+	max-width: 100%;
+	margin-top: 25px;
+}
+@media (max-width: 800px){
+	#javascriptlocale{
+		color: white;
+		line-height: 4;
+		margin-top: 4px;
+		max-width: 350px;
+		font-size: 17px;
+		margin-left: 18px;
+	}
+}
+@media (max-width: 600px){
+	#javascriptlocale{
+		color: white;
+		line-height: 5;
+		margin-top: 4px;
+		max-width: 300px;
+		font-size: 14px;
+		margin-left: 30px;
+		}
+}
+@media (max-width: 320px){
+	#javascriptlocale{
+		color: white;
+		line-height: 4;
+		margin-top: -40px;
+		max-width: 220px;
+		font-size: 11px;
+		margin-left: 44px;
+	}
+	.TeamHeader > div > a > img{
+		width: 40px;
+		height: 38px;
+	}
+	#headerimg{
+		margin-top: 0px;
+	}
+}
 </style>
 
 
@@ -58,19 +106,12 @@ li:hover{
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-          	#headerimg{
-          		max-width: 100%;
-          		margin-top: 25px;
-          	}
+
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
         <div>
-        	<img class="img-responsive" src="img/VeroNoctisBannerBW.jpg" id="headerimg"></img>
+        	<img class="img-responsive" src="img/VNredux.png" id="headerimg" style="width: 100%;"></img>
         </div>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
@@ -81,7 +122,20 @@ li:hover{
         <![endif]-->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container TeamHeader">
-                <a href="index.html"><img src="img/VNLogotrans.png" width="80" height="76">Team Vero Noctis</img></a>
+                <div class="col-xs-1">
+                <a href="index.html"><img src="img/VNLogotrans.png" width="80" height="76"></img></a>
+                </div>
+                	<div id="carousel-example-generic2" class="carousel slide col-xs-11 res" data-ride="carousel">
+						  <!-- Indicators -->
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" id="javascriptlocale">
+
+						  </div>
+
+						  <!-- Controls -->
+
+						</div>
       </div>
 
     </div>
@@ -112,17 +166,7 @@ li:hover{
 		      </ul>
 		     <div class="navbar-right" style="min-width: 300px; text-align: center; color: white; margin-top: 7px; margin-bottom: 4px;">
 				<div style="max-width: 600px; margin-left: auto; margin-right: auto;">
-						<div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
-						  <!-- Indicators -->
 
-						  <!-- Wrapper for slides -->
-						  <div class="carousel-inner" id="javascriptlocale">
-
-						  </div>
-
-						  <!-- Controls -->
-
-						</div>
 			 </div>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->

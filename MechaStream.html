@@ -6,12 +6,14 @@
 
 <style>
 .TeamHeader{
-	font-size: 24px;
+    font-size: 24px;
 }
 .TeamHeader a, .TeamHeader a:hover{
-	color: white;
+    color: white;
 }
-
+.artsy-like{
+    margin-top:20px;
+}
 
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
 display: block;
@@ -22,28 +24,75 @@ width: 600px;
 }
 
 #carousel-example-generic{
-	 margin: 0 auto;
-	 width: 100%;
+     margin: 0 auto;
+     width: 100%;
 }
 .container-fluid{
-	background-color: black;
-	margin-top: -2px;
+    background-color: black;
+    margin-top: -2px;
 }
 .open{
-	background-color:black;
+    background-color:black;
 }
 li:hover{
-	color: white;
+    color: white;
 }
 
 .jumbotron{
-	border-bottom: 20px solid black;
-	background-color: white;
-
+    border-bottom: 20px solid black;
+    background-color: white;
 }
 
 .caption > h3, .caption > p{
-	text-align: center;
+    text-align: center;
+}
+#javascriptlocale{
+    color:white; line-height: 3; max-width: 500px;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+#headerimg{
+    max-width: 100%;
+    margin-top: 25px;
+}
+@media (max-width: 800px){
+    #javascriptlocale{
+        color: white;
+        line-height: 4;
+        margin-top: 4px;
+        max-width: 350px;
+        font-size: 17px;
+        margin-left: 18px;
+    }
+}
+@media (max-width: 600px){
+    #javascriptlocale{
+        color: white;
+        line-height: 5;
+        margin-top: 4px;
+        max-width: 300px;
+        font-size: 14px;
+        margin-left: 30px;
+        }
+}
+@media (max-width: 320px){
+    #javascriptlocale{
+        color: white;
+        line-height: 4;
+        margin-top: -40px;
+        max-width: 220px;
+        font-size: 11px;
+        margin-left: 44px;
+    }
+    .TeamHeader > div > a > img{
+        width: 40px;
+        height: 38px;
+    }
+    #headerimg{
+        margin-top: 0px;
+    }
 }
 </style>
 
@@ -57,18 +106,13 @@ li:hover{
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-          	#headerimg{
-          		max-width: 100%;
-          		margin-top: 25px;
-          	}
+
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <img src="img/VeroNoctisBannerBW.jpg" id="headerimg"></img>
+        <div>
+            <img class="img-responsive" src="img/VNredux.png" id="headerimg" style="width: 100%;"></img>
+        </div>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
     </head>
@@ -78,7 +122,20 @@ li:hover{
         <![endif]-->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container TeamHeader">
-                <a href="index.html"><img src="img/VNLogotrans.png" width="80" height="76">Team Vero Noctis</img></a>
+                <div class="col-xs-1">
+                <a href="index.html"><img src="img/VNLogotrans.png" width="80" height="76"></img></a>
+                </div>
+                    <div id="carousel-example-generic2" class="carousel slide col-xs-11 res" data-ride="carousel">
+                          <!-- Indicators -->
+
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner" id="javascriptlocale">
+
+                          </div>
+
+                          <!-- Controls -->
+
+                        </div>
       </div>
 
     </div>
@@ -139,6 +196,31 @@ li:hover{
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
     </body>
+
+            <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript">
+        
+                $.getJSON("http://veronoctis.herokuapp.com", function( data ){
+                    var div = document.getElementById('javascriptlocale');
+                    $( document ).ready(function(){
+                    for (var i=0; i < 5 ; i++){
+                        if(data["TEAM-0ef42470-e6bf-11e3-a0c3-d4ae528a458b"]["matchHistory"][i]["win"]){
+                            var stats =  "<button type='button' class='btn btn-success'>Win </button>";
+                        }else{
+                            var stats = "<button type='button' class='btn btn-danger'>Loss </button>";
+                        }
+                        if (i == 0){
+                            div.innerHTML = div.innerHTML + "<div class='item active'>" +"Vero Noctis VS. " + data["TEAM-0ef42470-e6bf-11e3-a0c3-d4ae528a458b"]["matchHistory"][i]["opposingTeamName"] + " " + stats + "</div>";
+                        }
+                        else{
+                            div.innerHTML = div.innerHTML + "<div class='item'>" + "Vero Noctis VS. " + data["TEAM-0ef42470-e6bf-11e3-a0c3-d4ae528a458b"]["matchHistory"][i]["opposingTeamName"]+ " " + stats + "</div>";
+                        }
+
+                    }
+                })
+            });
+        </script>
 </html>
 
 

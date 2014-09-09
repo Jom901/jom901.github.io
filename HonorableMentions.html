@@ -99,6 +99,7 @@ body {
 		margin-top: 0px;
 	}
 }
+
 footer{
 	text-align: right;
 	padding-right:50px;
@@ -161,7 +162,7 @@ footer{
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
+		        <li><a href="index.html">Home</a></li>
 		        <li><a href="Team.html">Teammates</a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Streams <span class="caret"></span></a>
@@ -169,7 +170,7 @@ footer{
 		            <li><a href="MechaStream.html">Mecha Albizu</a></li>
 		          </ul>
 		        </li>
-		     	<li><a href="HonorableMentions.html">Honorable Mentions</a></lif>
+		     	<li class="active"><a href="#">Honorable Mentions</a></lif>
 		      </ul>
 		     <div class="navbar-right" style="min-width: 300px; text-align: center; color: white; margin-top: 7px; margin-bottom: 4px;">
 				<div style="max-width: 600px; margin-left: auto; margin-right: auto;">
@@ -178,110 +179,73 @@ footer{
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-    <div>
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div>
-			    <div class="jumbotron col-sm-12" style="margin-top: -21px;">
-			    	<div style="max-width: 600px; margin-left: auto; margin-right: auto;">
-						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-						  <!-- Indicators -->
-						  <ol class="carousel-indicators">
-						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						  </ol>
-
-						  <!-- Wrapper for slides -->
-						  <div class="carousel-inner">
-						    <div class="item active">
-						      <img src="img/Carousel1.jpg" alt="..."></img>
-						      <div class="carousel-caption">
-						        <p>Team Vero Noctis at Optic Fiber Gaming</p>
-						      </div>
-						    </div>
-						    <div class="item">
-						      <img src="img/PlaceHolder1.jpg" alt="...">
-						      <div class="carousel-caption">
-						        <p>Vero Noctis doing what they do best</p>
-						      </div>
-						    </div>
-						  </div>
-
-						  <!-- Controls -->
-						  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-						    <span class="glyphicon glyphicon-chevron-left"></span>
-						  </a>
-						  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-						    <span class="glyphicon glyphicon-chevron-right"></span>
-						  </a>
-						</div>
-					</div>
-
-				</div>
-		</div>
-	</div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="img/Fighter.png" class="artsy-like" alt="...">
-		      <div class="caption">
-		        <h3>Mecha Albizu</h3>
-		        <p>Jungler/Team Captain</p>
-		      </div>
-		    </div>
-		  </div>
-		 <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="img/Mage.png" class="artsy-like" alt="...">
-		      <div class="caption">
-		        <h3>O P</h3>
-		        <p>Mid Lane/Co-Captain</p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="img/Tank.png" class="artsy-like" alt="...">
-		      <div class="caption">
-		        <h3>Gensu</h3>
-		        <p>Top Lane</p>
-		      </div>
-		    </div>
-		  </div>
-      </div>
-      <!-- Example row of columns -->
-      <div class="row">
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="img/Marksman.png" class="artsy-like" alt="...">
-		      <div class="caption">
-		        <h3>Leolrath</h3>
-		        <p>Marksman</p>
-		      </div>
-		    </div>
-		  </div>
-		 <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="img/Support.png" class="artsy-like" alt="...">
-		      <div class="caption">
-		        <h3>Kuro</h3>
-		        <p>Support</p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="img/Assassin.png" class="artsy-like" alt="...">
-		      <div class="caption">
-		        <h3>Kyonop</h3>
-		        <p>Substitute</p>
-		      </div>
-		    </div>
-		  </div>
-      <hr>
-
+    <div class="backdrop">
+    	<style>
+    	.Rewards-Container{
+    		border: 3px solid #eeeeee;
+    		margin: 10px;
+    		margin-right: auto;
+    		margin-left: auto;
+    		padding-bottom: 20px;
+    		padding-top: 20px;
+    		margin-bottom: 30px;
+    	}
+    	.Rewards img{
+    		max-width: 250px;
+    		max-height: 250px;
+    		margin-left: auto;
+    		margin-right: auto;
+    	}
+    	.Rewards .Name{
+    		border-bottom: 2px solid #eeeeee;
+    		font-size: 40px;
+    	}
+    	.Rewards .Name a, a:hover, a:focus{
+    		color: #EA0000;
+    	}
+    	.Rewards{
+    		max-width: 100%;
+    		font-size: 25px;
+    	}
+    	@media (max-width: 600px){
+    		.Rewards-Container{
+    			max-width: 300px;
+    		}
+    		.Rewards .Name{
+    			font-size:25px;
+    		}
+			.Rewards{
+				font-size: 15px;
+				text-align: justify;
+			} 
+    	}
+    	</style>
+    <div class="container Rewards-Container">
+    	<div class="Rewards">
+    		<div class="col-xs-12 col-lg-3">
+    			<a href="https://www.facebook.com/MSFPhoto"><img src="img/msftrans.png" class="img-responsive"></img>  </a>
+    		</div>
+    		<div class="col-xs-12 col-lg-9 helpercontent">
+    			<div class="Name">
+    				<a href="https://www.facebook.com/MSFPhoto">Mario Stefano Fong</a>
+    			</div>
+    			Great photography work and a good friend, he's taken various pictures of events hosted by Electronic Sports Puerto Rico, most notably (to date) the pictures of Optic Fiber Gaming. He offers photography services so don't be afraid to him him up and check out his his page.
+    		</div>
+    	</div>
+    </div>
+        <div class="container Rewards-Container">
+    	<div class="Rewards">
+    		<div class="col-xs-12 col-lg-3">
+    			<a href=""><img src="img/VNLogotrans.png" class="img-responsive"></img>  </a>
+    		</div>
+    		<div class="col-xs-12 col-lg-9 helpercontent">
+    			<div class="Name">
+    				<a href="">All of our fans</a>
+    			</div>
+    			We want to give a big shout out and thanks to everyone who's been rooting us on and giving us support. We really appreciate you guys and want you guys to know that every time we push ourselves to get better, we do it because we want to get better and we want to keep showing you guys that we've got what it takes.
+    		</div>
+    	</div>
+    </div>
     </div> <!-- /container -->        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 

@@ -57,6 +57,11 @@ body {
     max-width: 100%;
     margin-top: 25px;
 }
+@media (min-width: 1600px){
+    .container{
+        margin-left: 70px !important;
+    }
+}
 @media (max-width: 800px){
     #javascriptlocale{
         color: white;
@@ -93,6 +98,9 @@ body {
     #headerimg{
         margin-top: 0px;
     }
+}
+footer{
+    text-align: right;
 }
 </style>
 
@@ -154,15 +162,16 @@ body {
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li><a href="index.html">Home</a></li>
-		        <li><a href="Team.html">Teammates</a></li>
-		        <li class="dropdown active">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Streams <span class="caret"></span></a>
-		          <ul class="dropdown-menu" role="menu">
-		            <li><a href="#">O P</a></li>
-		            <li><a href="MechaStream.html">Mecha Albizu</a></li>
-		          </ul>
-		        </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Team.html">Teammates</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Streams <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Mecha Albizu</a></li>
+                  </ul>
+                </li>
+                <li><a href="HonorableMentions.html">Honorable Mentions</a></lif>
+              </ul>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->

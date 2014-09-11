@@ -272,10 +272,9 @@ body{
 			});
 		</script>
 		<script>
-		jQuery.ajax({
-     		url: "Jom.html", dataType: "html"
-		}).done(function( responseHtml ) {
-     		$("#Recepticle").html(responseHtml);
+		$.get( "Jom.html", function( data ) {
+		  $( "#Recepticle" ).html( data );
+		  alert( "Load was performed." );
 		});
 		$(".OP").hover(function(){
   			$(".OP").css("background-color","#7C7C7C");

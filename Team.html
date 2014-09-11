@@ -272,7 +272,11 @@ body{
 			});
 		</script>
 		<script>
-		$("#Recepticle").load("Jom.html");
+		jQuery.ajax({
+     		url: "Jom.html", dataType: "html"
+		}).done(function( responseHtml ) {
+     		$("#Recepticle").html(responseHtml);
+		});
 		$(".OP").hover(function(){
   			$(".OP").css("background-color","#7C7C7C");
   		},function(){
